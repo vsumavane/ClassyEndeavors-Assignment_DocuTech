@@ -1,0 +1,14 @@
+{
+  "Button": [
+    {
+      "propName": "textContent",
+      "propType": "string",
+      "defaultValue": "Vishal"
+    },
+    {
+      "propName": "imgUrl",
+      "propType": "string",
+      "defaultValue": "alsjfljsf"
+    }
+  ]
+}
