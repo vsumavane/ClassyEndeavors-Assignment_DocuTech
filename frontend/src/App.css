@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@keyframes typing {
+  0% {
+  visibility: hidden;
+  width: 0;
+}
+100% {
+  width: 100%;
+}
+}

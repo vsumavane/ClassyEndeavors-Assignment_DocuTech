@@ -1,4 +1,11 @@
-const navBar = { sections: ["Features", "Why Choose Us", "Pricing", "FAQ"] };
+const navBar = { 
+    sections: [
+        { name: "Features", link: "#features" },
+        { name: "Why Choose Us", link: "#why-choose-us" },
+        { name: "Pricing", link: "#pricing" },
+        { name: "FAQ", link: "#faq" }
+    ] 
+};
 
 const features = {
     fileInput: {
