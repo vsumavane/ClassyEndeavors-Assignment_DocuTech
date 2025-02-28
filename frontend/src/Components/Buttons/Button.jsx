@@ -1,13 +1,12 @@
-import './Button.css'
 import PropTypes from 'prop-types';
 
-function Button(props) {
+function Button(prop) {
     return (
     <>
         <button className='flex bg-blue-900 hover:bg-blue-800 px-2 py-2 rounded-4xl cursor-pointer hover:shadow-2xl'>
-            <img className='size-12 rounded-3xl ' src={props.imgUrl}/>
-            <a className='pl-2 pr-4 py-2 text-white font-light align-baseline text-lg'>
-            {props.textContent}
+            <img className='size-6 rounded-3xl ' src={prop.imgUrl}/>
+            <a className='pl-2 pr-4 text-white font-light text-sm'>
+            {prop.textContent}
             </a>
         </button>
     </>
