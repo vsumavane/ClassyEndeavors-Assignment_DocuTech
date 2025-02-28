@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
+import img1 from "/src/assets/icons/tick.svg";
 
 const HeadMessage = () => {
     return (
@@ -49,7 +50,7 @@ const ComplianceList = () => (
 
 const ComplianceItem = ({ text }) => (
     <span className="flex items-center px-3">
-        <img className="px-1" src="/src/assets/icons/tick.svg" alt="tick icon" />
+        <img className="px-1" src={img1} alt="tick icon" />
         {text}
     </span>
 ); 
