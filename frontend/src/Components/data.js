@@ -22,32 +22,38 @@ const clientLogos = ["/src/assets/logos/absa.svg",
     "/src/assets/logos/us-san-diego.svg"];
 
 const userFeedbacks = [{
-    profilePhoto: "",
+    id:1,
+    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    profilePhoto: "",
+    id:2,
+    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    profilePhoto: "",
+    id:3,
+    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    profilePhoto: "",
+    id:4,
+    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    profilePhoto: "",
+    id:5,
+    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    profilePhoto: "",
+    id:6,
+    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 }];
@@ -73,5 +79,5 @@ const faq = [{
     a: "Yep! DocuTech signatures are totally legit and legally binding, just like signing with a pen—except digital and way cooler. As long as they follow the right security rules, courts accept them, so no worries there. Plus, they’re encrypted and tracked, so it's safer than losing a paper contract in your junk drawer!"
 }];
 
-export default {navBar,features,clientLogos,userFeedbacks,faq};
+export default {features, navBar, faq,clientLogos, userFeedbacks}
 
