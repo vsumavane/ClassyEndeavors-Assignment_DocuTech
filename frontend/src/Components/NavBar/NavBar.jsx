@@ -21,7 +21,7 @@ function NavBar() {
                 <a href="https://discord.com">
                     <img src={discordIcon} alt="User Icon" />
                 </a>
-                <Button buttonStyle={"rounded-md"}>Get Started</Button>
+                <Button className={"rounded-md"}>Get Started</Button>
             </div>
         </div>
     )
