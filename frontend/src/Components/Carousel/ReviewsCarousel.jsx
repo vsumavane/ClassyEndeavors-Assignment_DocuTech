@@ -46,18 +46,22 @@ export default function ImageSlider() {
     slidesToShow: 3,
     prevArrow: <NewPrevArrow/>,
     nextArrow: <NewNextArrow/>,
+    autoplay: true
     // nextArrow: <CustomNextArrow />,
     // prevArrow: <CustomPrevArrow />,
   };
-return (
-    <div className="image-slider-container m-5 px-10">
-        <Slider {...settings}>
-            {data.userFeedbacks.map((fb, index) => (
-                <div key={index} className='px-3 py-10'>
-                    <ReviewCard child={fb.children} rating={fb.rating} img={fb.profilePhoto} />
-                </div>
-            ))}
-        </Slider>
-    </div>
+return (<div className='my-5'>
+<p className='text-center font-bold text-2xl'> What our users say </p>
+  <div className="image-slider-container mx-10 px-10 ">
+      <Slider {...settings}>
+          {data.userFeedbacks.map((fb, index) => (
+              <div key={index} className='px-3 py-10'>
+                  <ReviewCard child={fb.children} rating={fb.rating} img={fb.profilePhoto} />
+              </div>
+          ))}
+      </Slider>
+  </div>
+  </div>
+  
 );
 }

@@ -12,4 +12,11 @@
   --brand-blue-300: #bec9d6;
   --brand-blue-200: #d3dbe4;
   --brand-blue-100: #e9edf1;
+
+  --animate-typing: typing 1s  infinite alternate;
+  @keyframes typing {
+    to {
+      left: 100%;
+    }
+  }
 }
