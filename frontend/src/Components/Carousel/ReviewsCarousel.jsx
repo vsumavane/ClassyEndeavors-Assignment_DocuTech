@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import data from '../../Components/data';
 import ReviewCard from '../../Components/Cards/ReviewCard';
-import { ScrollButton } from '../Buttons/scrollButton';
+import ScrollButton from '../Buttons/ScrollButton';
 
 // eslint-disable-next-line react/prop-types
 function NewPrevArrow({onClick}) {

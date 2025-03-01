@@ -1,7 +1,7 @@
 import prev from '../../assets/icons/prev.svg'
 import next from '../../assets/icons/next.svg'
 
-export function ScrollButton(props) {
+export default function ScrollButton(props) {
     // eslint-disable-next-line react/prop-types
     const {type, className, onclick, style} = props;
     return (
