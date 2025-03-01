@@ -1,11 +1,15 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
-@keyframes typing {
-  0% {
-  visibility: hidden;
-  width: 0;
-}
-100% {
-  width: 100%;
-}
+@theme {
+  --brand-blue: #254A76;
+  --brand-blue-900: #3b5c84;
+  --brand-blue-800: #516e91;
+  --brand-blue-700: #66809f;
+  --brand-blue-600: #7c92ad;
+  --brand-blue-500: #92a5bb;
+  --brand-blue-400: #a8b7c8;
+  --brand-blue-300: #bec9d6;
+  --brand-blue-200: #d3dbe4;
+  --brand-blue-100: #e9edf1;
 }

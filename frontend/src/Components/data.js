@@ -1,3 +1,5 @@
+import profilePhoto from '../assets/photos/person.jpg'
+
 const navBar = { 
     sections: [
         { name: "Features", link: "#features" },
@@ -29,38 +31,38 @@ const clientLogos = ["/src/assets/logos/absa.svg",
     "/src/assets/logos/us-san-diego.svg"];
 
 const userFeedbacks = [{
-    id:1,
-    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: 1,
+    profilePhoto: profilePhoto,
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    id:2,
-    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
+    id: 2,
+    profilePhoto: profilePhoto,
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    id:3,
-    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
+    id: 3,
+    profilePhoto: profilePhoto,
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    id:4,
-    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
+    id: 4,
+    profilePhoto: profilePhoto,
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    id:5,
-    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
+    id: 5,
+    profilePhoto: profilePhoto,
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 },
 {
-    id:6,
-    profilePhoto: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewperformance1-697509.jpg&fm=jpg",
+    id: 6,
+    profilePhoto: profilePhoto,
     children: "Create contracts, agreements & forms in seconds using advanced AI technology",
     rating: 5
 }];
