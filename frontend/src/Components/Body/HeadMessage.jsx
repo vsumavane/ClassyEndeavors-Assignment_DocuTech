@@ -25,7 +25,7 @@ const Header = () => {
   });
 
   return (
-    <p className="my-3 font-bold text-center text-5xl">
+    <p className="my-3 font-bold text-center text-5xl pointer-events-none">
       AI-Powered Unified Platform; <br />
       <span className="bg-clip-text text-transparent bg-gradient-to-l from-blue-900 to-blue-400">
         {words[currentWordIndex]}
@@ -36,7 +36,7 @@ const Header = () => {
 };
 
 const SubHeader = () => (
-  <p className="my-10 text-center text-gray-600">
+  <p className="my-10 text-center text-gray-600 pointer-events-none">
     Fast, Smart & Secure – Works with Google Drive, Dropbox, Salesforce & Your
     Favorite Business Tools
   </p>
@@ -44,7 +44,7 @@ const SubHeader = () => (
 
 const ComplianceList = () => (
   <div className="flex justify-center">
-    <p className="flex">
+    <p className="flex pointer-events-none">
       <ComplianceItem text="ESIGN Compliant" />
       <ComplianceItem text="UETA Approved" />
       <ComplianceItem text="eIDAS Certified" />

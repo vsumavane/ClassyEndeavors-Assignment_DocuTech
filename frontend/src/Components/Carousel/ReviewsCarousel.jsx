@@ -51,7 +51,7 @@ export default function ImageSlider() {
     // prevArrow: <CustomPrevArrow />,
   };
 return (<div className='my-5'>
-<p className='text-center font-bold text-2xl'> What our users say </p>
+<p className='text-center font-bold text-2xl pointer-events-none'> What our users say </p>
   <div className="image-slider-container mx-10 px-10 ">
       <Slider {...settings}>
           {data.userFeedbacks.map((fb, index) => (
