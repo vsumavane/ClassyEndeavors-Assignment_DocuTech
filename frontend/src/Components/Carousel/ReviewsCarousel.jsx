@@ -77,7 +77,7 @@ export default function ImageSlider() {
     ]
   };
 return (
-<div className=''>
+<div className='mx-20 my-10'>
 <p className='font-bold text-brand-black-light text-2xl pointer-events-none max-w-fit mx-auto'> What our users say </p>
 <div className="image-slider-container  max-w-7xl mx-auto">
     <Slider {...settings}>
