@@ -5,7 +5,7 @@ import discordIcon from "/src/assets/icons/discord.svg";
 
 function NavBar() {
     return (
-        <div className='flex mx-10 my-10 justify-between items-center'>
+        <div className="sticky top-0 backdrop-blur-md"><div className='flex mx-10 my-10 py-3 justify-between items-center'>
             <a className='flex items-center' href="/">
                 <img className="size-5 mr-1" src={icon} alt="DocuTech Logo" />
                 <span className='font-bold text-blue-900'>DocuTech</span>
@@ -23,7 +23,8 @@ function NavBar() {
                 </a>
                 <Button className={"rounded-md"}>Get Started</Button>
             </div>
-        </div>
+        </div></div>
+        
     )
 }
 
