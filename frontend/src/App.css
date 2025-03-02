@@ -5,10 +5,14 @@
 @layer base {
   body {
     font-family: Poppins;
+
+
+
   }
 }
 
 @theme {
+
   --brand-blue: #254A76;
   --brand-blue-900: #3b5c84;
   --brand-blue-800: #516e91;
@@ -19,13 +23,23 @@
   --brand-blue-300: #bec9d6;
   --brand-blue-200: #d3dbe4;
   --brand-blue-100: #e9edf1;
+  --color-brand-black-light: #262626;
+  --color-brand-blue: #254A76;
+  --color-brand-blue-down: #80BBEB;
+  --color-brand-gray: #EDEBF7;
 
   --font-poppins: "Poppins", sans-serif; 
 
-  --animate-typing: typing 1s  infinite alternate;
+  --animate-typing: typing 1s steps(20)  infinite;
   @keyframes typing {
-    to {
-      left: 100%;
+    0% {
+      max-width: 0%;
+        }
+    50% {
+      max-width: 100%;
+    }
+    100% {
+      max-width: 0%;
     }
   }
 }
