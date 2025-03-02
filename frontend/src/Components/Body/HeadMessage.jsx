@@ -44,7 +44,7 @@ const SubHeader = () => (
 
 const ComplianceList = () => (
   <div className="flex justify-center">
-    <p className="flex pointer-events-none">
+    <p className="flex pointer-events-none font-light text-gray-700 text-sm">
       <ComplianceItem text="ESIGN Compliant" />
       <ComplianceItem text="UETA Approved" />
       <ComplianceItem text="eIDAS Certified" />
