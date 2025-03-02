@@ -8,13 +8,13 @@ import ScrollButton from '../Buttons/ScrollButton';
 // eslint-disable-next-line react/prop-types
 function NewPrevArrow({onClick}) {
   return (
-      <ScrollButton className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pl-5" onclick={onClick} style={{left:-12}} type="prev"/>
+      <ScrollButton className="absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-5" onclick={onClick} style={{left:-12}} type="prev"/>
   );
 }
 // eslint-disable-next-line react/prop-types
 function NewNextArrow({onClick}) {
     return (
-        <ScrollButton className="absolute top-1/2 -translate-y-1/2 z-10 "onclick={onClick} style={{right:-12}} type="next"/>
+        <ScrollButton className="absolute top-1/2 -translate-y-1/2 z-10 mr-5"onclick={onClick} style={{right:-12}} type="next"/>
       
     )
   }
@@ -46,22 +46,50 @@ export default function ImageSlider() {
     slidesToShow: 3,
     prevArrow: <NewPrevArrow/>,
     nextArrow: <NewNextArrow/>,
-    autoplay: true
+    autoplay: true,
     // nextArrow: <CustomNextArrow />,
     // prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
-return (<div className='my-5'>
-<p className='text-center font-bold text-2xl pointer-events-none'> What our users say </p>
-  <div className="image-slider-container mx-10 px-10 ">
-      <Slider {...settings}>
-          {data.userFeedbacks.map((fb, index) => (
-              <div key={index} className='px-3 py-10'>
-                  <ReviewCard child={fb.children} rating={fb.rating} img={fb.profilePhoto} />
-              </div>
-          ))}
-      </Slider>
+return (
+<div className=''>
+<p className='font-bold text-brand-black-light text-2xl pointer-events-none max-w-fit mx-auto'> What our users say </p>
+<div className="image-slider-container  max-w-7xl mx-auto">
+    <Slider {...settings}>
+        {data.userFeedbacks.map((fb, index) => (
+            <div key={index} className='px-8 py-10'>
+                <ReviewCard child={fb.children} rating={fb.rating} img={fb.profilePhoto} />
+            </div>
+        ))}
+    </Slider>
+</div>
   </div>
-  </div>
+
   
 );
 }
