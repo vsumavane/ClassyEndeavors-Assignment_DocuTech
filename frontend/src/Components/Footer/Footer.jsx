@@ -34,7 +34,7 @@ export default function Footer () {
                         </a>
                     ))}
                 </div>
-                <div className="flex flex-wrap text-white text-sm ">
+                <div className="flex flex-wrap text-white text-[16px] ">
                     {Sections.map((Sections, index) => (
                         <a key={index}
                                 href={Sections.link} 

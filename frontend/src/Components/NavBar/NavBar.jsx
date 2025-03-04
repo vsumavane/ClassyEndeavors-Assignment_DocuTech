@@ -1,18 +1,20 @@
 import Button from "../Buttons/Button";
 import data from "../data";
+import { SignUp } from "./signup";
 import icon from "/src/assets/dt_logo.svg";
 import discordIcon from "/src/assets/icons/discord.svg";
 
 function NavBar() {
     window.addEventListener("scroll", function() {
         let shadowClass = document.getElementById('NavBar');
-        if (window.scrollY > 10.0) { 
+        if (window.scrollY > 60) { 
             shadowClass.classList.add("shadow-md");
         } else {
             shadowClass.classList.remove("shadow-md");
         }
     });
     return (
+        <><SignUp/>
         <div id='NavBar' className="sticky top-0 backdrop-blur-xl duration-300 z-20">
             <div className='flex mx-10 my-5 py-3 justify-between items-center'>
             <a className='flex items-center' href="/">
@@ -21,7 +23,7 @@ function NavBar() {
             </a>
             <div className="flex text-[16px] justify-center font-light text-brand-black-light ">
                 {data.sections.map((item, index) => (
-                    <button href={item.link} key={index} className="hover:ring-2 hover:ring-brand-blue active:ring-1 rounded-2xl transition duration-300 px-4">
+                    <button href={item.link} key={index} className="text-[16px] hover:ring-2 hover:ring-brand-blue active:ring-1 rounded-2xl transition duration-300 px-4">
                         {item.name}
                     </button>
                 ))}
@@ -33,6 +35,8 @@ function NavBar() {
                 <Button className={"rounded-md"}>Get Started</Button>
             </div>
         </div></div>
+        </>
+        
         
     )
 }
