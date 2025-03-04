@@ -4,7 +4,7 @@ import img1 from "/src/assets/icons/tick.svg";
 
 const HeadMessage = () => {
   return (
-    <div className="px-5 py-5 justify-center">
+    <div className="my-10 justify-center">
       <Header />
       <SubHeader />
       <ComplianceList />
@@ -52,7 +52,7 @@ const Header = () => {
 
         // Only set interval if not paused
         if (!isPaused) {
-            const typingInterval = setInterval(handleTyping, isDeleting ? 30 : 100);
+            const typingInterval = setInterval(handleTyping, isDeleting ? 30 : 50);
             return () => clearInterval(typingInterval);
         } else {
             // No need for interval when paused
@@ -61,13 +61,13 @@ const Header = () => {
     }, [charIndex, isDeleting, currentWordIndex, words, isPaused]);
 
     return (
-        <p className="my-3 font-bold text-center text-5xl pointer-events-none">
+        <h1 className="my-3 font-bold text-center text-6xl pointer-events-none">
             AI-Powered Unified Platform; <br />
             <span className="bg-clip-text text-transparent bg-linear-to-r from-0% from-brand-blue-down via-55% via-brand-blue to-100% to-brand-blue">
-                {displayedWord}
-            </span>{" "}
+                {displayedWord}{" "}
+            </span>
             Effortlessly
-        </p>
+        </h1>
     );
 };
 

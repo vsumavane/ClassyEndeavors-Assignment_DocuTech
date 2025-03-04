@@ -3,17 +3,26 @@ import NavBar from './Components/NavBar/NavBar'
 import HeadMessage from './Components/Body/HeadMessage'
 import ReviewCarousel from './Components/Carousel/ReviewsCarousel'
 import FileGetter from './Components/Body/FileGetter'
-import Background from './Components/Body/Background'
+import TextStatement from './Components/Body/TextStatement'
+import { Logos } from './Components/Body/Logos'
+import Footer from './Components/Footer/Footer'
+import WhyChooseDocuTech from './Components/Body/WhyChooseDocuTEch'
+import Subscription from './Components/Body/Subscription'
+import FAQSection from './Components/Body/FAQ'
 
 function App() {
-  // const img = 'https://img.freepik.com/free-vector/illustration-share-icon_53876-5843.jpg?t=st=1740597330~exp=1740600930~hmac=7bdb0b9b6b8da2b633f5d89034c7e1f3891f54238eced4bc2143b84bf73c0121&w=1380';
   return (
     <>
     <NavBar/>
     <HeadMessage/>
-    <Background/>
     <FileGetter/>
+    <TextStatement/>
+    <Logos/>
     <ReviewCarousel/>
+    <WhyChooseDocuTech/>
+    <Subscription/>
+    <FAQSection/>
+    <Footer/>
     </>
   )
 }

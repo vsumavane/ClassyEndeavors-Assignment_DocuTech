@@ -47,14 +47,12 @@ export default function ImageSlider() {
     prevArrow: <NewPrevArrow/>,
     nextArrow: <NewNextArrow/>,
     autoplay: true,
-    // nextArrow: <CustomNextArrow />,
-    // prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: false
         }
@@ -63,7 +61,7 @@ export default function ImageSlider() {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2
         }
       },
@@ -76,10 +74,11 @@ export default function ImageSlider() {
       }
     ]
   };
+
 return (
-<div className='mx-20 my-10'>
-<p className='font-bold text-brand-black-light text-2xl pointer-events-none max-w-fit mx-auto'> What our users say </p>
-<div className="image-slider-container  max-w-7xl mx-auto">
+<div className=' my-10'>
+<h2 className='font-bold text-brand-black-light text-3xl pointer-events-none max-w-fit mx-auto'> What our users say </h2>
+<div className=" image-slider-container  max-w-7xl mx-auto -z-10">
     <Slider {...settings}>
         {data.userFeedbacks.map((fb, index) => (
             <div key={index} className='px-8 py-10'>
@@ -88,8 +87,6 @@ return (
         ))}
     </Slider>
 </div>
-  </div>
-
-  
+</div>
 );
 }

@@ -7,7 +7,7 @@ function RatingStars(props) {
     return (
         <div className="flex">
             {Array(stars).fill().map((_, i) => (
-                <img key={i} src={icon} alt="star" className="px-1" />
+                <img key={i} src={icon} alt="star" className="px-1 max-h-4 max-w-8" />
             ))}
         </div>
     );

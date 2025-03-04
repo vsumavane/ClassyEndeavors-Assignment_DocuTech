@@ -1,11 +1,13 @@
 export default function Background() {
     return (
-        <>
-        <div className="">
-            <div className="absolute overflow-hidden left-0 ml-[-700px] blur-[1000px] bg-brand-blue w-[870px] h-[870px] rounded-full  -z-10"/>
-            <div className="absolute overflow- right-0 mr-[-700px] blur-[1000px] bg-brand-blue w-[870px] h-[870px] rounded-full  -z-10"/>
-        </div>
-            
-        </>
+<>
+  <div className="absolute inset-0  overflow-x-hidden">
+    {/* Left Blur */}
+    <div className="absolute left-[-700px] top-0 blur-[1000px] bg-brand-blue w-[870px] h-[870px] rounded-full opacity-50" />
+    
+    {/* Right Blur */}
+    <div className="absolute right-[-350px] top-0 blur-[1000px] bg-brand-blue w-[870px] h-[870px] rounded-full opacity-50" />
+  </div>
+</>
     )
 }
