@@ -23,9 +23,9 @@ function NavBar() {
             </a>
             <div className="flex text-[16px] justify-center font-light text-brand-black-light ">
                 {data.sections.map((item, index) => (
-                    <button href={item.link} key={index} className="text-[16px] hover:ring-2 hover:ring-brand-blue active:ring-1 rounded-2xl transition duration-300 px-4">
+                    <a href={item.link} key={index} className="text-[16px] hover:ring-2 hover:ring-brand-blue active:ring-1 rounded-2xl transition duration-300 px-4">
                         {item.name}
-                    </button>
+                    </a>
                 ))}
             </div>
             <div className="flex items-center space-x-5">

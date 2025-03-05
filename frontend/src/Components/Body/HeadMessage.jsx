@@ -21,43 +21,67 @@ const Header = () => {
     const [isPaused, setIsPaused] = useState(false);
 
     useEffect(() => {
-        const handleTyping = () => {
-            const currentWord = words[currentWordIndex];
-            
-            // If paused, don't do anything (waiting period after typing word)
-            if (isPaused) return;
-            
-            if (isDeleting) {
-                if (charIndex > 0) {
-                    setDisplayedWord(currentWord.substring(0, charIndex - 1));
-                    setCharIndex(charIndex - 1);
-                } else {
-                    setIsDeleting(false);
-                    setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-                }
-            } else {
-                if (charIndex < currentWord.length) {
-                    setDisplayedWord(currentWord.substring(0, charIndex + 1));
-                    setCharIndex(charIndex + 1);
-                } else {
-                    // Word is fully typed - pause before deleting
-                    setIsPaused(true);
-                    setTimeout(() => {
-                        setIsPaused(false);
-                        setIsDeleting(true);
-                    }, 2000); // 2 second delay
-                }
-            }
-        };
-
-        // Only set interval if not paused
-        if (!isPaused) {
-            const typingInterval = setInterval(handleTyping, isDeleting ? 30 : 50);
-            return () => clearInterval(typingInterval);
+      const handleTyping = () => {
+        const currentWord = words[currentWordIndex];
+        
+        // If paused, don't do anything (waiting period after typing word)
+        if (isPaused) return;
+        
+        if (isDeleting) {
+          if (charIndex > 0) {
+            setDisplayedWord(currentWord.substring(0, charIndex - 1));
+            setCharIndex(charIndex - 1);
+          } else {
+            setIsDeleting(false);
+            setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+          }
         } else {
-            // No need for interval when paused
-            return () => {};
+          if (charIndex < currentWord.length) {
+            setDisplayedWord(currentWord.substring(0, charIndex + 1));
+            setCharIndex(charIndex + 1);
+          } else {
+            // Word is fully typed - pause before deleting
+            setIsPaused(true);
+            setTimeout(() => {
+              setIsPaused(false);
+              setIsDeleting(true);
+            }, 2000); // 2 second delay
+          }
         }
+      };
+
+      // Check if component is in viewport
+      const checkVisibility = () => {
+        const element = document.querySelector('h1');
+        if (!element) return;
+        
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        
+        if (!isVisible && !isPaused) {
+          setIsPaused(true);
+        } else if (isVisible && isPaused && !isDeleting && charIndex === words[currentWordIndex].length) {
+          // Don't unpause if we're in the normal pause after completing a word
+        } else if (isVisible && isPaused) {
+          setIsPaused(false);
+        }
+      };
+
+      // Set up scroll listener
+      window.addEventListener('scroll', checkVisibility);
+      checkVisibility(); // Check initial state
+      
+      // Only set interval if not paused
+      if (!isPaused) {
+        const typingInterval = setInterval(handleTyping, isDeleting ? 30 : 50);
+        return () => {
+          clearInterval(typingInterval);
+          window.removeEventListener('scroll', checkVisibility);
+        };
+      } else {
+        // Clean up scroll listener when paused
+        return () => window.removeEventListener('scroll', checkVisibility);
+      }
     }, [charIndex, isDeleting, currentWordIndex, words, isPaused]);
 
     return (

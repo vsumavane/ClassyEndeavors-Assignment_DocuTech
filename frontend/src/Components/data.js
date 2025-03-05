@@ -129,17 +129,69 @@ const whyDocutech ={ trusted: {
 }
 
 const plans = {
-    monthly: [
-        { name: "Free", price: "0", features: ["5 documents a month", "Activity timeline"] },
-        { name: "Premium", price: "10", features: ["Unlimited documents", "Unlimited signees", "Activity timeline", "Certificate of completion"] },
-        { name: "Teams", price: "8 per user", minTotal: "24", features: ["Everything from Premium", "Team management", "Transferable contracts"] }
+    "currency": "USD",
+    "monthly": [
+      {
+        "name": "Free",
+        "price": "0",
+        "features": [
+          "5 documents a month",
+          "Activity timeline"
+        ]
+      },
+      {
+        "name": "Premium",
+        "price": "10",
+        "features": [
+          "Unlimited documents",
+          "Unlimited signees",
+          "Activity timeline",
+          "Certificate of completion"
+        ]
+      },
+      {
+        "name": "Teams",
+        "price": "8 per user",
+        "minTotal": "24",
+        "features": [
+          "Everything from Premium",
+          "Team management",
+          "Transferable contracts"
+        ]
+      }
     ],
-    annual: [
-        { name: "Free", price: "0", features: ["5 documents a month", "Activity timeline"] },
-        { name: "Premium", price: "100", features: ["Unlimited documents", "Unlimited signees", "Activity timeline", "Certificate of completion"] },
-        { name: "Teams", price: "80 per user", minTotal: "240", features: ["Everything from Premium", "Team management", "Transferable contracts"] }
+    "annual": [
+      {
+        "name": "Free",
+        "price": "0",
+        "features": [
+          "5 documents a month",
+          "Activity timeline"
+        ]
+      },
+      {
+        "name": "Premium",
+        "price": "100",
+        "features": [
+          "Unlimited documents",
+          "Unlimited signees",
+          "Activity timeline",
+          "Certificate of completion"
+        ]
+      },
+      {
+        "name": "Teams",
+        "price": "80 per user",
+        "minTotal": "240",
+        "features": [
+          "Everything from Premium",
+          "Team management",
+          "Transferable contracts"
+        ]
+      }
     ]
-};
+  }
+  
 
 export default {features, sections, faq,clientLogos, userFeedbacks, socialIcons, whyDocutech, plans}
 

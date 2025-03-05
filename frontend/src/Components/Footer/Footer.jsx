@@ -34,11 +34,11 @@ export default function Footer () {
                         </a>
                     ))}
                 </div>
-                <div className="flex flex-wrap text-white text-[16px] ">
+                <div className="flex flex-wrap text-white text-[16px]">
                     {Sections.map((Sections, index) => (
                         <a key={index}
                                 href={Sections.link} 
-                                className="mx-3 underline-effect"
+                                className="mx-3 underline-effect "
                             >
                                 {Sections.name}
                         </a>

@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import data from "../data"
 
 export default function WhyChooseDocuTech() {
     const [selected, setSelected] = useState("trusted");
     const contentData = data.whyDocutech;
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setSelected(prev => {
+          const keys = Object.keys(contentData);
+          const currentIndex = keys.indexOf(prev);
+          const nextIndex = (currentIndex + 1) % keys.length;
+          return keys[nextIndex];
+        });
+      }, 5000);
+      
+      return () => clearInterval(interval);
+    }, [contentData]);
 
   
     return (

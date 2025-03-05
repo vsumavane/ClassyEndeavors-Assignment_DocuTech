@@ -9,21 +9,32 @@ import Footer from './Components/Footer/Footer'
 import WhyChooseDocuTech from './Components/Body/WhyChooseDocuTEch'
 import Subscription from './Components/Body/Subscription'
 import FAQSection from './Components/Body/FAQ'
+import Background from './Components/Body/Background'
 
 function App() {
   return (
-    <>
+    <div className=' scroll-smooth'>
     <NavBar/>
     <HeadMessage/>
-    <FileGetter/>
-    <TextStatement/>
-    <Logos/>
+    <Background/>
+    <div id="features">
+      <FileGetter/>
+      <TextStatement/>
+      <Logos/>
+    </div>
     <ReviewCarousel/>
-    <WhyChooseDocuTech/>
-    <Subscription/>
-    <FAQSection/>
+    <Background/>
+    <div id="why-choose-us">
+      <WhyChooseDocuTech/>
+    </div>
+    <div id="pricing">
+      <Subscription/>
+    </div>
+    <div id="faq">
+      <FAQSection/>
+    </div>
     <Footer/>
-    </>
+    </div>
   )
 }
 
