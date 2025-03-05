@@ -13,7 +13,7 @@ import Background from './Components/Body/Background'
 
 function App() {
   return (
-    <div className=' scroll-smooth'>
+    <div>
     <NavBar/>
     <HeadMessage/>
     <Background/>
