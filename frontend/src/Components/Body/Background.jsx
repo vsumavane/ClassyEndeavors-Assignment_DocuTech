@@ -1,9 +1,9 @@
 export default function Background() {
   return (
-    <div className="absolute w-full -z-20">
-      <div className="flex justify-between w-full  ">
-      <div className="blur-[200px] bg-brand-blue w-[400px] h-[800px] rounded-r-full" /> 
-      <div className="blur-[200px] bg-brand-blue w-[400px] h-[800px] rounded-l-full" />
+    <div className="absolute -z-20 w-full">
+      <div className="flex w-full justify-between">
+        <div className="bg-brand-blue h-[800px] w-[400px] rounded-r-full blur-[200px]" />
+        <div className="bg-brand-blue h-[800px] w-[400px] rounded-l-full blur-[200px]" />
       </div>
     </div>
   );

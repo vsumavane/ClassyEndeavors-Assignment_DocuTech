@@ -1,11 +1,15 @@
 export default function TextStatement() {
-    return (
-        <div className="flex justify-center my-10">
-            <h2 className=" max-w-2xl font-bold text-3xl text-center leading-10 ">
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-brand-blue-down via-25% via-brand-blue-mid to-50% to-brand-blue ">64.0k</span>
-            {" "}businesses and individuals have signed with {" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-brand-blue-down via-brand-blue-mid to-brand-blue">DocuTech</span>
-            </h2>
-        </div>
-    )
+  return (
+    <div className="my-10 flex justify-center">
+      <h2 className="max-w-2xl text-center text-3xl leading-10 font-bold">
+        <span className="from-brand-blue-down via-brand-blue-mid to-brand-blue bg-linear-to-r via-25% to-50% bg-clip-text text-transparent">
+          64.0k
+        </span>{" "}
+        businesses and individuals have signed with{" "}
+        <span className="from-brand-blue-down via-brand-blue-mid to-brand-blue bg-linear-to-r bg-clip-text text-transparent">
+          DocuTech
+        </span>
+      </h2>
+    </div>
+  );
 }
