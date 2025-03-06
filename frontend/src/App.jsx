@@ -10,6 +10,7 @@ import WhyChooseDocuTech from "./Components/Body/WhyChooseDocuTEch";
 import Subscription from "./Components/Body/Subscription";
 import FAQSection from "./Components/Body/FAQ";
 import Background from "./Components/Body/Background";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
@@ -34,7 +35,9 @@ function App() {
         <FAQSection />
       </div>
       <Footer />
+      <SpeedInsights/>
     </div>
+   
   );
 }
 
